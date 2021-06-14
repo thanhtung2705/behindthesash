@@ -1,0 +1,167 @@
+// TYPOGRAPHY
+// Define all typographic styles in this file.
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @include alternateGotNo1D;
+  margin-bottom: 15px;
+  font-weight: 400;
+}
+
+.h1,
+h1 {
+  font-size: 48px;
+  line-height: 1;
+
+  @media only screen and (min-width: $tablet) {
+    font-size: 58px;
+    line-height: 0.86;
+  }
+}
+
+.h2,
+h2 {
+  font-size: 36px;
+  line-height: 1;
+
+  @media only screen and (min-width: $tablet) {
+    font-size: 48px;
+    line-height: 1.04;
+  }
+}
+
+.h3,
+h3 {
+  font-size: 30px;
+  line-height: 0.93;
+
+  @media only screen and (min-width: $tablet) {
+    font-size: 38px;
+    line-height: 1.05;
+  }
+}
+
+h4 {
+  font-size: 21px;
+  line-height: 1.1428;
+}
+
+h5 {
+  font-size: 18px;
+  line-height: 1.3333;
+}
+
+h6 {
+  font-size: 12px;
+  line-height: 1.6667;
+}
+
+h1, h2, h3 {
+  text-transform: uppercase;
+  color: $primary-color;
+}
+
+%link,
+.link {
+  color: $link-color;
+  text-decoration: none;
+  transition: all .3s ease;
+  cursor: pointer;
+
+  &:active,
+  &:hover {
+    color: $link-color-hover;
+  }
+
+  &--white {
+    color: $white;
+
+    &:active,
+    &:hover {
+      color: darken($white, 15%);
+    }
+  }
+}
+
+a {
+  @extend %link;
+  cursor: pointer;
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+em {
+  font-style: italic;
+}
+
+b,
+strong {
+  font-weight: 700;
+}
+
+sub {
+  vertical-align: sub;
+  font-size: smaller;
+}
+
+sup {
+  vertical-align: super;
+}
+
+small {
+  font-size: smaller;
+}
+
+abbr {
+  border-bottom: 1px dotted $text-color;
+  cursor: help;
+}
+
+tt,
+code,
+kbd,
+samp {
+  font-family: monospace;
+}
+
+ol,
+ul {
+  padding-left: rem(16px);
+}
+
+// li {
+//   list-style-type: none;
+// }
+
+label {
+  font-weight: 700;
+}
+
+blockquote {
+  p {
+    display: inline;
+  }
+
+  &:before {
+    content: '\201c';
+  }
+
+  &:after {
+    content: '\201d';
+  }
+}
+
+iframe,
+img {
+  max-width: 100%;
+}
+
+figure {
+  line-height: 0;
+}

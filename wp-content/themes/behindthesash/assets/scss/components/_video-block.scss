@@ -1,0 +1,92 @@
+.video-block {
+	padding: 40px 0 20px;
+
+	@media only screen and (min-width: $tablet) {
+		padding: 49px 0 50px;
+		text-align: center;
+	}
+
+	&__image {
+		line-height: 0;
+		text-align: center;
+
+		img {
+			max-width: 306px;
+			width: auto;
+			height: auto;
+		}
+	}
+
+	&__title {
+		margin-bottom: 15px;
+		color: $primary-color;
+		text-transform: uppercase;
+		@extend .h3;
+
+		@media only screen and (min-width: $tablet) {
+			margin-bottom: 30px;
+			padding: 0 40px;
+		}
+
+		@media only screen and (min-width: $desktop) {
+			padding: 0 80px;
+		}
+	}
+
+	&__content {
+		margin-bottom: 40px;
+
+		@media only screen and (min-width: $tablet) {
+			margin-bottom: 80px;
+			padding: 0 50px;
+		}
+
+		@media only screen and (min-width: $desktop) {
+			padding: 0 100px;
+		}
+	}
+
+	&__video {
+		line-height: 0;
+		position: relative;
+
+		a {
+			display: inline-block;
+		}
+
+		&--play {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			text-align: center;
+			width: 100px;
+			height: 100px;
+
+			@media only screen and (max-width: $mobileOnly) {
+				width: 75px;
+				height: 75px;
+			}
+
+			img {
+				width: 100%;
+				height: auto;
+			}
+		}
+	}
+}
+
+.lity-wrap {
+	margin: 0 20px;
+}
+
+.lity-close {
+	min-width: inherit;
+	position: absolute;
+	top: -25px;
+	right: -25px;
+
+	&:active {
+		top: -25px;
+	}
+}

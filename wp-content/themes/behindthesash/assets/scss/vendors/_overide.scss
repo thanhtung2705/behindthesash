@@ -1,0 +1,52 @@
+.slick-banner-prev,
+.slick-banner-next {
+  width: 43px;
+  height: 43px;
+  position: absolute;
+  display: inline-block;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  font-size: 0 ;
+  cursor: pointer;
+  background: transparent;
+  color: $white;
+
+  @media only screen and (max-width: $mobileOnly) {
+    top: 82%;
+  }
+
+  &:before {
+    @extend %icons;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    color: $white;
+
+    @media only screen and (max-width: $mobileOnly) {
+      font-size: 20px;
+    }
+  }
+}
+
+.slick-banner-prev {
+  @extend .icon-arrow-bottom;
+  left: 0;
+  transform: rotate(90deg);
+
+  @media only screen and (min-width: $tablet) {
+    left: 20px;
+  }
+}
+
+.slick-banner-next {
+  @extend .icon-arrow-bottom;
+  right: 0;
+  transform: rotate(-90deg);
+
+  @media only screen and (min-width: $tablet) {
+    right: 20px;
+  }
+}

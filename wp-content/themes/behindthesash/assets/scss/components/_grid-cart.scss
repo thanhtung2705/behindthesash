@@ -1,0 +1,106 @@
+.grid-cart {
+	padding: 20px 0 5px;
+
+	@media only screen and (min-width: $tablet) {
+		padding: 30px 0 80px;
+	}
+
+	&__item {
+		@media only screen and (min-width: $tablet) {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+		}
+
+		&.one-image {
+			.image-hover {
+				display: block !important;
+			}
+
+			.grid-cart__image:hover {
+				.image-normal {
+					display: block !important;
+				}
+
+				.image-hover {
+					display: block !important;
+				}
+			}
+		}
+	}
+
+	&__image {
+		line-height: 0;
+		overflow: hidden;
+    position: relative;
+
+		@media only screen and (min-width: $tablet) {
+			width: 50%;
+		}
+
+		img {
+			width: 100%;
+			height: auto;
+		}
+
+		.image-hover {
+			display: none;
+		}
+
+		&:hover {
+			.image-normal {
+				display: none;
+			}
+
+			.image-hover {
+				display: block;
+			}
+		}
+	}
+
+	&__body {
+		padding: 30px 20.5px;
+
+		@media only screen and (min-width: $tablet) {
+			width: 50%;
+			padding: 15px;
+
+			p {
+				font-size: 14px;
+			}
+
+			.grid-cart__title {
+				font-size: 36px;
+			}
+		}
+
+		@media only screen and (min-width: 850px) {
+			p {
+				font-size: 16px;
+			}
+
+			.grid-cart__title {
+				font-size: 38px;
+			}
+		}
+
+		@media only screen and (min-width: $desktop) {
+			padding: 40px;
+		}
+
+		@media only screen and (min-width: 1179px) {
+			padding: 85px 100px;
+		}
+	}
+
+	&__title {
+		margin-bottom: 10px;
+		text-transform: uppercase;
+		color: $primary-color;
+		font-weight: 400;
+	}
+
+	&__content {
+		margin-bottom: 20px;
+	}
+}

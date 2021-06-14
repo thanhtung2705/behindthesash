@@ -1,0 +1,201 @@
+// Texts
+.text {
+  &--center {
+    text-align: center;
+  }
+
+  &--left {
+    text-align: left;
+  }
+
+  &--right {
+    text-align: right;
+  }
+
+  &--bold {
+    font-weight: 700;
+  }
+
+  // Dark Colors
+  &--dark {
+    color: $text-color;
+  }
+
+  // Light Colors
+  &--white {
+    color: $white;
+
+    a {
+      @extend %link--white;
+    }
+  }
+
+  //Text Light blue 
+  &--light-blue {
+    color: $light-blue;
+  }
+
+  //Text Red 
+  &--red {
+    color: $red;
+  }
+
+  // Text Blue
+  &--blue {
+    color: $blue;
+    position: relative;
+    margin-bottom: 30px;
+
+    &:before {
+      content: "";
+      position: absolute;
+      width: 64px;
+      height: 1px;
+      bottom: -15px;
+      left: 0;
+      background: #555555;
+    }
+  }
+
+  &--with-blue {
+    color: $blue;
+  }
+
+  &--large {
+    font-size: 18px;
+    line-height: 1.22;
+
+    @media only screen and (min-width: 992px) {
+      font-size: 20px;
+      line-height: 1.4;
+    }
+  }
+
+  &--small {
+    font-size: 12px;
+    line-height: 1.6667;
+  }
+
+  &--has-border {
+    position: relative;
+
+    &:before {
+      content: "";
+      position: absolute;
+      width: 64px;
+      height: 1px;
+      bottom: -21px;
+      left: 0;
+      background: #555555;
+
+      @media only screen and (min-width: 992px) {
+        bottom: -23px;
+      }
+    }
+  }
+}
+
+// Backgrounds
+.bg {
+  // Dark backgrounds
+  &--primary {
+    background-color: $primary-color;
+  }
+
+  // Light backgrounds
+  &--white {
+    background-color: $white;
+  }
+
+  // Yellow backgrounds
+  &--yellow {
+    background-color: $yellow;
+  }
+
+  // Red backgrounds
+  &--red {
+    background-color: $red;
+
+    h3 {
+      color: $red;
+    }
+  }
+
+  // Green backgrounds
+  &--green {
+    background-color: $green;
+  }
+
+  // Orange backgrounds
+  &--orange {
+    background-color: $orange;
+
+    .btn {
+      background: $white;
+      color: $orange;
+      border-color: $white;
+
+      &:hover {
+        background: $orange;
+        color: $white;
+        border-color: $white;
+      }
+    }
+
+    h3 {
+      color: $orange;
+    }
+  }
+
+  // Blue backgrounds
+  &--blue {
+    background-color: $blue;
+    text-align: center;
+    color: $white;
+  }
+
+  // Light blue backgrounds
+  &--light-blue {
+    background-color: $light-blue;
+  }
+}
+
+.section-title {
+  text-align: center;
+  color: $primary-color;
+  margin-bottom: 30px;
+
+  @media only screen and (min-width: $tablet) {
+    margin-bottom: 42px;
+  }
+}
+
+.image-desktop {
+  line-height: 0;
+  @media only screen and (max-width: $mobileOnly) {
+    display: none;
+  }
+}
+
+.image-mobile {
+  display: none;
+  margin-bottom: 0;
+  line-height: 0;
+
+  @media only screen and (max-width: $mobileOnly) {
+    display: block;
+    box-shadow: none !important;
+  }
+}
+
+.image-right {
+  @media only screen and (min-width: $tablet) {
+    .grid-cart__image {
+      order: 2;
+    }
+
+    .grid-cart__body {
+      order: 1;
+    }
+  }
+}

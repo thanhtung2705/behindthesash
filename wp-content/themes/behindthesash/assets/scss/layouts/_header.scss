@@ -1,0 +1,59 @@
+.header {
+  position: absolute;
+  z-index: 2;
+
+  @media only screen and (min-width: $tablet) {
+    width: 150px;
+    height: 150px;
+  }
+
+  @media only screen and (min-width: $desktop) {
+    width: 272px;
+    height: 212px;
+  }
+
+  @media only screen and (max-width: $mobileOnly) {
+    width: 99px;
+    height: 77px;
+  }
+
+  &:before {
+    @media only screen and (min-width: $tablet) {
+      position: absolute;
+      content: "";
+      top: 40%;
+      left: 20%;
+      opacity: 0.6;
+      background: -moz-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 60%, rgba(255,255,255,0) 68%); /* FF3.6-15 */
+      background: -webkit-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 60%,rgba(255,255,255,0) 68%); /* Chrome10-25,Safari5.1-6 */
+      background: radial-gradient(ellipse at center, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 60%,rgba(255,255,255,0) 68%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      width: 450px;
+      height: 350px;
+      z-index: 1;
+      transform: translate(-50%, -50%);
+      border-radius: 100%;
+    }
+
+    @media only screen and (min-width: $desktopWide) {   
+      width: 750px;
+      height: 550px;
+    }
+  }
+
+  @media only screen and (max-width: $mobileOnly) {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &__inner {
+    position: relative;
+    z-index: 2;
+  }
+
+  &__logo {
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}

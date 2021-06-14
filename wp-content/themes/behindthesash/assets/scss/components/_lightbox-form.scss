@@ -1,0 +1,174 @@
+.lightbox-form {
+  position: absolute;
+  top: 30px;
+  bottom: 30px;
+  background: $white;
+  display: flex;
+  height: calc(100vh - 80px);
+  max-height: 795px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  overflow-y: scroll;
+
+  @media(max-height: 540px) {
+    height: calc(100vh - 40px);
+  }
+
+  @media only screen and (min-width: 1024px) {
+    align-items: center;
+    overflow-y: auto;
+  }
+
+	&__wrap {
+    max-height: 100%;
+    padding: 20px;
+    position: relative;
+
+    @media only screen and (min-width: 1024px) {
+      padding: 25px 100px;
+    }
+
+    @media only screen and (max-width: 1023px) {
+      .wpcf7 {
+        padding-bottom: 30px;
+      }
+    } 
+	}
+
+	&__title {
+		color: $primary-color;
+		text-transform: uppercase;
+		margin-bottom: 20px;
+
+    @media(max-height: 767px) and (min-width: 1024px) {
+      padding-top: 20px;
+    }
+	}
+
+	&__content {
+    margin-bottom: 29px;
+	}
+
+	.form-item {
+		margin-bottom: 22px;
+    width: 100%;
+    max-width: 477px;
+
+    @media only screen and (max-width: $mobilePortrait) {
+      margin-bottom: 10px;
+    }
+
+    @media only screen and (min-height: 768px) {
+      margin-bottom: 15px;
+    }
+
+    @media only screen and (min-height: 1024px) {
+      margin-bottom: 20px;
+    }
+	}
+
+	.wpcf7-quiz-label {
+		text-transform: uppercase;
+    line-height: 1.75;
+    color: $text-color !important;
+    font-weight: 400;
+	}
+
+	.form-item-captcha {
+		margin-bottom: 20px;
+	}
+
+  .form-list {
+    @media(max-height: 767px) and (min-width: 1024px) {
+      padding-bottom: 30px;
+    }
+
+    @media(max-height: 479px) {
+      padding-bottom: 0;
+    }
+  }
+}
+
+.form-bars {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  cursor: pointer;
+  padding: 10px 0;
+  z-index: 1;
+
+  @media only screen and (min-width: 768px) {
+    width: 30px;
+    height: 30px;
+    top: 20px;
+    right: 14px;
+  }
+
+  br {
+    display: none;
+  }
+
+  &__row {
+    display: block;
+    background: $text-color;
+    height: 2px;
+    width: 20px;
+
+    @media only screen and (min-width: 768px) {
+      width: 27px;
+    }
+
+    &:nth-child(1) {
+      transform: translateY(0) rotate(-45deg);
+    }
+
+    &:nth-child(2) {
+      transform: translateY(-2px) rotate(45deg)
+    }
+  }
+}
+
+.lightbox-formwrap {
+	position: fixed;
+  width: 100vw;
+  height: auto;
+  background-color: rgba(50,44,47,.9);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: .3s;
+
+  &.active {
+  	opacity: 1;
+  	visibility: visible;
+  }
+
+  .container {
+		height: 100%;
+		position: relative;
+	}
+}
+
+.form-item-captcha {
+	.wpcf7-quiz-label {
+		@media only screen and (max-width: 512px) {
+			line-height: 1.5;
+		}
+	}
+}
+
+.wpcf7-not-valid-tip {
+  padding-top: 10px;
+
+  @media only screen and (max-width: $mobilePortrait) {
+    line-height: 1;
+    padding-top: 5px;
+  }
+}

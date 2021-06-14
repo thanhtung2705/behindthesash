@@ -1,0 +1,41 @@
+// COLORS
+// Define all color variables in this document
+// Use http://chir.ag/projects/name-that-color/ for naming a color.
+
+$black: #000;
+$white: #fff;
+$silver: #ccc;
+$pigeon-post: #aec9de;
+$pigeon-post-light: rgba($pigeon-post, .75);
+
+// Gray
+$gray: #4b4b4b;
+$gray-bold: #666666;
+
+// Red
+$red: #da1f3f;
+
+// Pink
+$pink: #a95871;
+
+// Blue
+$blue: #1e5178;
+$light-blue: #00c1f0;
+
+
+// Orange
+$orange: #f57d50;
+
+// Yellow
+$yellow: #fcb712;
+
+// Green
+$green: #88b747;
+
+// Brand colors
+$primary-color: $pink;
+$text-color: $gray;
+
+// Link color
+$link-color: $primary-color;
+$link-color-hover: lighten($primary-color, 25%);

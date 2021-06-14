@@ -1,0 +1,134 @@
+// LAYOUT
+// This is the main layout file.
+// This file should be used to define the primary page layout that each of the page types will be extending.
+// This includes global styles for html, body, etc.
+
+@viewport{
+  zoom: 1;
+  width: extend-to-zoom;
+}
+
+@-ms-viewport{
+  width: extend-to-zoom;
+  zoom: 1;
+}
+
+//Enable font-smoothing
+html {
+  @include nunito;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  color: $text-color;
+  font-size: $base-font-size; // Don't modify static unit.
+  font-smoothing: antialiased;
+  font-weight: 400;
+  line-height: $base-line-height;
+}
+
+body {
+  // Disable in production mode;
+  // @include show-breakpoints;
+  text-size-adjust: none;
+
+  &.no-scroll {
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    // margin: 0; 
+    // height: 100%; 
+    // overflow: hidden
+
+    @media(max-width: 767px) {
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      position: fixed;
+    }
+  }
+}
+
+main {
+  overflow: hidden;
+}
+
+.error404 {
+  .header {
+    position: relative;
+    margin: auto;
+
+    &:before {
+      position: inherit;
+    }
+
+    @media only screen and (max-width: $mobileOnly) {
+      transform: inherit;
+      position: inherit;
+    }
+  }
+
+  .wrapper {
+    text-align: center;
+  }
+
+  main {
+    box-sizing: border-box;
+    min-height: calc(100vh - 500px) !important;
+    padding: 50px 0;
+
+    @media(max-height: $tablet) {
+      min-height: calc(100vh - 400px) !important;
+    }
+
+    @media(max-height: $mobileOnly) {
+      min-height: calc(100vh - 200px) !important;
+    }
+
+    @media(max-height: $mobilePortraitOnly) {
+      min-height: 100vh !important;
+    }
+  }
+}
+
+.page-template-page-basic {
+  .header {
+    position: relative;
+    margin: auto;
+
+     &:before {
+      position: inherit;
+    }
+
+    @media only screen and (max-width: $mobileOnly) {
+      transform: inherit;
+      position: inherit;
+    }
+  }
+
+  .main-wrap {
+    text-align: center;
+  }
+
+  h1, h2, h3 {
+    text-transform: uppercase;
+    color: $primary-color;
+  }
+
+  main {
+    box-sizing: border-box;
+    min-height: calc(100vh - 500px) !important;
+    padding: 50px 0;
+
+    @media(max-height: $tablet) {
+      min-height: calc(100vh - 400px) !important;
+    }
+
+    @media(max-height: $mobileOnly) {
+      min-height: calc(100vh - 200px) !important;
+    }
+
+    @media(max-height: $mobilePortraitOnly) {
+      min-height: 100vh !important;
+    }
+  }
+}

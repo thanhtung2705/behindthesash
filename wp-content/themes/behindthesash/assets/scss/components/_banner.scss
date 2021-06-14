@@ -1,0 +1,157 @@
+.banner {
+	&__item {
+		@media only screen and (min-width: $tablet) {
+			position: relative;
+		}
+	}
+
+	&__image {
+		line-height: 0;
+		position: relative;
+
+		&:before {
+			@media only screen and (min-width: $tablet) {
+				position: absolute;
+				content: "";
+				bottom: 0;
+				left: 0;
+				opacity: 0.65;
+	      background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), #000000);
+			  width: 100%;
+			  height: 50%;
+			  z-index: 1;
+			}
+		}
+
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+
+	&__body {
+		z-index: 2;
+		width: 100%;
+		text-align: center;
+
+		@media only screen and (min-width: $tablet) {
+			position: absolute;
+			bottom: 20px;
+		}
+
+		@media only screen and (max-width: $mobileOnly) {
+			display: none;
+		}
+	}
+
+	&__title {
+		color: $white;
+		line-height: 0.875;
+		text-align: center;
+		text-transform: uppercase;
+		margin-bottom: 0;
+
+		@media only screen and (max-width: $mobileOnly) {
+			color: $text-color;
+			font-size: 36px;
+			line-height: 1;
+			padding: 0 10px;
+		}
+	}
+
+	&__subtitle {
+		color: $white;
+		font-size: 40px;
+		line-height: 1.05;
+		text-align: center;
+		text-transform: uppercase;
+
+		@media only screen and (max-width: $mobileOnly) {
+			color: $text-color;
+			font-size: 26px;
+			line-height: 1.08;
+			padding: 0 20px;
+		}
+	}
+
+	&__picture {
+		line-height: 0;
+		margin: auto;
+		width: 100%;
+		text-align: center;
+
+		img {
+			margin: 0 auto;
+			
+
+			@media only screen and (max-width: $mobileOnly) {
+				max-width: 267px;
+				height: auto;
+			}
+		}
+	}
+
+	&__text-mobile {
+		position: relative;
+		overflow: hidden;
+
+		&:before {
+			position: absolute;
+			content: "";
+			top: 0;
+			left: 0;
+			opacity: 0.86;
+      background-image: linear-gradient(to right, #ffffff, rgba(255, 255, 255, 0.35));
+		  width: 100%;
+		  height: 100%;
+		  z-index: 1;
+		  min-height: 330px;
+		}
+
+		.image-mobile {
+			@media only screen and (max-width: $mobileOnly) {
+				width: 41%;
+				margin: auto;
+			}
+		}
+
+		.banner__title {
+			padding: 0 20px;
+		}
+
+		.banner__title,
+		.banner__subtitle,
+		.banner__picture {
+			z-index: 5;
+		}
+
+		.banner__picture {
+			margin-bottom: 30px;
+		}
+
+		@media only screen and (min-width: $tablet) {
+			display: none;
+		}
+	}
+
+	&__background {
+		line-height: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    height: 100%;
+
+    img {
+    	width: 100%;
+    	height: 100%;
+    }
+	}
+
+	&__text-wrap {
+		z-index: 2;
+		position: relative;
+		padding: 15px 0;
+	}
+}

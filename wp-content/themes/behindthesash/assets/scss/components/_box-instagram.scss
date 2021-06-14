@@ -1,0 +1,51 @@
+.box-instagram {
+	padding: 40px 0 20px;
+	position: relative;
+	overflow: hidden; 
+
+	@media only screen and (min-width: $tablet) {
+		padding: 80px 0 40px;
+	}
+
+	.section-title {
+		margin-bottom: 18px;
+
+		@media only screen and (min-width: $tablet) {
+			margin-bottom: 43px;
+		}
+	}
+
+	&__wrap {
+		@media only screen and (min-width: $tablet) {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			align-items: center;
+			justify-content: center;
+		}
+	}
+
+	&__item {
+		width: calc((100% - 19px) / 2);
+		margin-right: 18px;
+		line-height: 0;
+
+		@media only screen and (min-width: $tablet) {
+			width: calc((100% - 81px) / 5);
+			margin-right: 20px;
+		}
+
+		&:last-of-type {
+			margin-right: 0;
+		}
+
+		img {
+			width: 100%;
+			height: auto;
+		}
+
+		a {
+			display: inline-block;
+		}
+	}
+}

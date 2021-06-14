@@ -1,0 +1,179 @@
+.cta {
+	padding: 40px 0;
+	position: relative;
+	overflow: hidden;
+
+	@media only screen and (min-width: $tablet) {
+		padding: 67.5px 0 86.5px;
+	}
+
+	@media only screen and (max-width: $mobilePortraitOnly) {
+		padding: 30px 0;
+	}
+
+	&:before {
+		position: absolute;
+		content: "";
+		top: 0;
+		left: 0;
+		opacity: 0.86;
+	  background-image: linear-gradient(to right, #ffffff, rgba(255, 255, 255, 0));
+	  width: 100%;
+	  height: 100%;
+	  z-index: 1;
+
+	  @media only screen and (max-width: $mobileOnly) {
+			background-image: linear-gradient(to top, #ffffff, rgba(255, 255, 255, 0));
+			display: none;
+	  }
+	}
+
+	&__background {
+		line-height: 0;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		overflow: hidden;
+		height: 100%;
+
+		img {
+			position: absolute;
+	    top: 50%;
+	    left: 50%;
+	    width: auto;
+	    height: 100%;
+	    max-width: inherit;
+			transform: translate(-50%, -50%);
+
+			@media only screen and (min-width: 681px) {
+				width: 100%;
+				height: auto;
+			}
+
+			@media only screen and (min-width: 768px) {
+				width: auto;
+				height: 100%;
+			}
+
+			@media only screen and (min-width: 1366px) {
+				width: 100%;
+				height: auto;
+			}
+		}
+	}
+
+	&__wrap {
+		position: relative;
+		z-index: 2;
+
+    @media only screen and (min-width: $tablet) {
+    	display: flex;
+	    justify-content: space-around;
+	    align-items: center;
+	    // padding: 30px 0;   
+    }
+	}
+
+	&__title {
+		color: #a95871;
+		text-transform: uppercase;
+		margin-bottom: 30px;
+		@extend .h1;
+
+		@media only screen and (min-width: $tablet) {
+			font-size: 48px
+		}
+
+		@media only screen and (min-width: $desktop) {
+			font-size: 58px
+		}
+	}
+
+	&__image {
+		line-height: 0;
+		
+
+		@media only screen and (min-width: $tablet) {
+			width: 31.75%;
+			margin-bottom: 0;
+		}
+
+		@media only screen and (max-width: $mobileOnly) {
+			width: 41%;
+			margin: auto;
+			margin-bottom: 40px;
+		}
+
+		@media only screen and (max-width: $mobilePortraitOnly) {
+			width: 70%;
+			margin-bottom: 30px;
+		}
+	}
+
+	&__body {
+		@media only screen and (min-width: $tablet) {
+			width: 45%;
+		}
+
+		@media only screen and (max-width: $mobileOnly) {
+			text-align: center;
+		}
+	}
+
+	&--has-no-title {
+		text-align: center;
+		background: #f4f4f4;
+		padding: 40px 0;
+
+		&:before {
+		  background-image: none;
+		}
+
+		@media only screen and (min-width: $tablet) {
+			padding: 60px 0;
+		}
+
+		.cta__wrap {
+			display: inherit;
+			top: 0;
+
+			@media only screen and (min-width: $tablet) {
+				padding: 0;
+			}
+		}
+
+		.cta__image {
+			width: 100%;
+			margin-bottom: 30px;
+			padding-bottom: 0;
+
+			@media only screen and (min-width: $tablet) {
+				margin-bottom: 42px
+			}
+
+			img {
+				@media only screen and (max-width: $mobilePortraitOnly) {
+					width: 65%;
+					height: auto;
+				}
+			}
+		}
+
+		.cta__body {
+			width: 100%;
+		}
+
+		.cta__content {
+			margin-bottom: 28px;
+
+			@media only screen and (min-width: $tablet) {
+				margin-bottom: 30px;
+			}
+
+			@media only screen and (max-width: $mobileOnly) {
+				padding: 0 41px;
+			}
+		}
+	}
+}
